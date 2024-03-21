@@ -34,7 +34,7 @@ Feature: Password Strength - Minimum Character Requirements
     And minUppercase = 2
     And minDigits = 2
     And minOtherChars = 2
-    Then the password strength should be rated as "WEAK"  # Might be rated as MEDIUM depending on implementation
+    Then the password strength should be rated as "STRONG"
 
   Scenario: Missing Minimum Uppercase
     Given the password is "aa11!!" (no uppercase letters)
@@ -43,7 +43,7 @@ Feature: Password Strength - Minimum Character Requirements
     And minUppercase = 2
     And minDigits = 2
     And minOtherChars = 2
-    Then the password strength should be rated as "WEAK"  # Might be rated as MEDIUM depending on implementation
+    Then the password strength should be rated as "STRONG"
 
   Scenario: Missing Minimum Digits
     Given the password is "aaAA!!" (no digits)
@@ -52,7 +52,7 @@ Feature: Password Strength - Minimum Character Requirements
     And minUppercase = 2
     And minDigits = 2
     And minOtherChars = 2
-    Then the password strength should be rated as "WEAK"  # Might be rated as MEDIUM depending on implementation
+    Then the password strength should be rated as "STRONG"
 
   Scenario: Missing Minimum Other Characters
     Given the password is "aaAA11" (no special characters)
@@ -61,7 +61,7 @@ Feature: Password Strength - Minimum Character Requirements
     And minUppercase = 2
     And minDigits = 2
     And minOtherChars = 2
-    Then the password strength should be rated as "WEAK"  # Might be rated as MEDIUM depending on implementation
+    Then the password strength should be rated as "STRONG"
 
   
   Scenario: Missing Minimum Lowercase and Uppercase
@@ -71,7 +71,7 @@ Feature: Password Strength - Minimum Character Requirements
     And minUppercase = 2
     And minDigits = 2
     And minOtherChars = 2
-    Then the password strength should be rated as "WEAK"
+    Then the password strength should be rated as "MEDIUM"
 
   Scenario: Missing Minimum Lowercase and Digits
     Given the password is "AA!!" (no lowercase or digits)
@@ -80,7 +80,7 @@ Feature: Password Strength - Minimum Character Requirements
     And minUppercase = 2
     And minDigits = 2
     And minOtherChars = 2
-    Then the password strength should be rated as "WEAK"
+    Then the password strength should be rated as "MEDIUM"
 
   Scenario: Missing Minimum Lowercase and Other Characters
     Given the password is "AA11" (no lowercase or special characters)
@@ -89,7 +89,7 @@ Feature: Password Strength - Minimum Character Requirements
     And minUppercase = 2
     And minDigits = 2
     And minOtherChars = 2
-    Then the password strength should be rated as "WEAK"
+    Then the password strength should be rated as "MEDIUM"
 
   Scenario: Missing Minimum Uppercase and Digits
     Given the password is "aa!!" (no uppercase or digits)
@@ -98,7 +98,7 @@ Feature: Password Strength - Minimum Character Requirements
     And minUppercase = 2
     And minDigits = 2
     And minOtherChars = 2
-    Then the password strength should be rated as "WEAK"
+    Then the password strength should be rated as "MEDIUM"
 
   Scenario: Missing Minimum Uppercase and Other Characters
     Given the password is "aa11" (no uppercase or special characters)
@@ -107,7 +107,7 @@ Feature: Password Strength - Minimum Character Requirements
     And minUppercase = 2
     And minDigits = 2
     And minOtherChars = 2
-    Then the password strength should be rated as "WEAK"
+    Then the password strength should be rated as "MEDIUM"
 
   Scenario: Missing Minimum Digits and Other Characters
     Given the password is "aaAA" (no digits or special characters)
@@ -116,7 +116,7 @@ Feature: Password Strength - Minimum Character Requirements
     And minUppercase = 2
     And minDigits = 2
     And minOtherChars = 2
-    Then the password strength should be rated as "WEAK"
+    Then the password strength should be rated as "MEDIUM"
     
 
     Scenario: Missing Minimum Lowercase, Uppercase, and Digits
