@@ -20,8 +20,6 @@ function checkPassword(password, minLowercase, minUppercase, minDigits, minOther
     strength = 'STRONG';
   } else if (metConditions == 2) {
     strength = 'MEDIUM';
-  } else {
-    strength = 'WEAK';
   }
 
   return strength;
