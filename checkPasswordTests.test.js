@@ -71,7 +71,7 @@ describe('Password Strength - Minimum Character Requirements', () => {
     const strength = checkPassword(password, minLowercase, minUppercase, minDigits, minOtherChars);
     expect(strength).toBe('MEDIUM');
   });
-  
+
   it('should be WEAK with missing minimum lowercase, uppercase, and digits', () => {
     const password = '!@';
     const strength = checkPassword(password, minLowercase, minUppercase, minDigits, minOtherChars);
@@ -94,5 +94,18 @@ describe('Password Strength - Minimum Character Requirements', () => {
     const password = 'aa';
     const strength = checkPassword(password, minLowercase, minUppercase, minDigits, minOtherChars);
     expect(strength).toBe('WEAK');
+  });
+});
+
+describe('(FAIL) Password Strength - Minimum Character Requirements', () => {
+  const minLowercase = 2;
+  const minUppercase = 2;
+  const minDigits = 2;
+  const minOtherChars = 2;
+
+  it('should be WEAK but forcing expectation STRONG with missing minimum uppercase, digits, and other characters', () => {
+    const password = 'aa';
+    const strength = checkPassword(password, minLowercase, minUppercase, minDigits, minOtherChars);
+    expect(strength).toBe('STRONG');
   });
 });
