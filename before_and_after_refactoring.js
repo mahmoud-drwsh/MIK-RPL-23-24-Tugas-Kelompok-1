@@ -1,3 +1,5 @@
+// Maintainability 
+
 // Before refactoring 
 function checkPassword(password, minLowercase, minUppercase, minDigits, minOtherChars) {
     // Count by removing unwanted characters
