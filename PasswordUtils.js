@@ -18,8 +18,6 @@ function checkPassword(password, minLowercase, minUppercase, minDigits, minOther
   let strength;
   if (metConditions > 2) {
     strength = 'STRONG';
-  } else if (metConditions == 2) {
-    strength = 'MEDIUM';
   }
 
   return strength;
